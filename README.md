@@ -1,10 +1,11 @@
 # Alex: Tele-operated Search and Rescue Robot
 
 ## Introduction
-![Alex Robot](path/to/alex_robot.jpg)
+
 Alex is a tele-operated robotic vehicle designed to assist in search and rescue operations during natural or manmade disasters. The aim is to maximize rescue efforts within the critical 72-hour window following a disaster. Alex is built to overcome the limitations of human rescuers, providing continuous operation without the need for rest. Equipped with advanced sensors and a robust communication system, Alex enhances the efficiency and safety of search and rescue missions.
 
 ## Features
+
 - **Continuous Operation**: Powered by six 1.5V batteries, allowing for over 72 hours of operation.
 - **Remote Control**: Operated remotely via a four-wheel drive system and RPLidar for obstacle and survivor detection.
 - **Enhanced Communication**: Equipped with an antenna to extend communication range.
@@ -12,7 +13,7 @@ Alex is a tele-operated robotic vehicle designed to assist in search and rescue 
 - **Mapping and Navigation**: Utilizes Hector SLAM for mapping and RVIZ for visualization.
 
 ## System Architecture
-![System Architecture](path/to/system_architecture.jpg)
+
 Alex comprises several key components:
 - **Motors**: Controlled by Arduino for movement.
 - **Sensors**: Includes RPLidar for scanning, ultrasonic sensor for distance measurement, and color sensor for detecting survivors.
@@ -20,6 +21,7 @@ Alex comprises several key components:
 - **Control System**: Commands are sent from a Raspberry Pi (RPi) to Arduino, which then controls the motors and sensors.
 
 ### Command and Response Structure
+
 | Device         | Command Type           | Response Type | Details                                                                 |
 | -------------- | ---------------------- | ------------- | ----------------------------------------------------------------------- |
 | Color Sensor   | COMMAND_COLOUR         | RESP_COLOUR   | Measures RGB values and distance to target.                             |
@@ -28,7 +30,7 @@ Alex comprises several key components:
 | Bluetooth Speaker | COMMAND_COLOUR      | RESP_OK       | Plays audio files based on detected survivor's status.                  |
 
 ## Hardware Components
-![Hardware Components](path/to/hardware_components.jpg)
+
 1. **HC-SR04 Ultrasonic Sensor**: Measures distance to prevent collisions.
 2. **Color Sensor**: Detects the color of objects (Green, Red, White).
 3. **Bluetooth Speaker**: Alerts rescuers and reassures survivors.
@@ -36,7 +38,7 @@ Alex comprises several key components:
 5. **Lidar Mount**: Ensures stable and unobstructed scanning by RPLidar.
 
 ## Firmware Design
-![Firmware Design](path/to/firmware_design.jpg)
+
 ### Arduino Algorithm
 - Receives command packets from the RPi.
 - Executes commands and responds with status packets.
@@ -48,7 +50,7 @@ Alex comprises several key components:
 - Movement commands are segmented to allow for smooth interruption and control.
 
 ## Software Design
-![Software Design](path/to/software_design.jpg)
+
 ### Raspberry Pi Algorithm
 - Acts as the main control unit, processing user inputs and generating maps with Hector SLAM.
 - Operates with a video game-like control interface for smooth teleoperation.
@@ -60,15 +62,16 @@ Alex comprises several key components:
 - **Customized RVIZ Pose Transform**: Improves visualization accuracy in RVIZ.
 
 ## Lessons Learnt
-![Lessons Learnt](path/to/lessons_learnt.jpg)
+
 1. **Connectivity**: Enhanced with an antenna for better communication range.
 2. **Battery Life**: Increased with additional batteries for extended operation.
 
 ## Conclusion
+
 Alex is a robust and efficient tool designed to support search and rescue operations, overcoming the limitations of human rescuers by providing continuous operation and advanced sensing capabilities. This project demonstrates the integration of hardware and software to create a reliable and effective rescue robot.
 
 ## Annexes
-![Annexes](path/to/annexes.jpg)
+
 - **Annex A**: Detailed review of state-of-the-art search and rescue robots.
 - **Annex B**: Table of additional commands and responses.
 - **Annex C**: Hardware components specifications.
